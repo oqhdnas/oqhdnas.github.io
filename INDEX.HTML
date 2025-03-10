@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Tempinho Juntos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300&display=swap');
+
+        body {
+            background-color: #800000; /* Vinho fosco */
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            scroll-behavior: smooth; /* Rolagem suave */
+            margin: 0;
+            overflow-x: hidden; /* Evitar rolagem horizontal */
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .frase {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        /* Carrossel de Imagens */
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 40px auto;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 3s ease-in-out;
+            position: absolute;
+        }
+
+        .carousel img.active {
+            opacity: 1;
+        }
+
+        /* Nome e Mensagem */
+        .love-title {
+            color: white;
+            font-size: 3rem;
+            font-family: 'Dancing Script', cursive;
+            margin-top: 20px;
+        }
+
+        .love-message {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: white;
+        }
+
+        /* Contador Manual */
+        .container {
+            margin-top: 40px;
+        }
+
+        #contador {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.2); /* Caixa transparente */
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            min-width: 60px;
+        }
+
+        .time-label {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            color: white;
+        }
+
+        /* Animação de pétalas e corações */
+        .petalas, .coracoes {
+            position: absolute;
+            pointer-events: none;
+            animation: flutuar 10s linear infinite;
+        }
+
+        .petalas {
+            top: 0;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://cdn.pixabay.com/photo/2017/08/30/12/56/flower-2692276_960_720.png');
+            background-size: cover;
+            animation-duration: 8s;
+            opacity: 0.8;
+        }
+
+        .coracoes {
+            top: 0;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background-image: url('https://cdn.pixabay.com/photo/2017/08/30/12/56/heart-2692276_960_720.png');
+            background-size: cover;
+            animation-duration: 12s;
+            opacity: 0.6;
+        }
+
+        @keyframes flutuar {
+            0% {
+                transform: translateX(-50%) translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(50%) translateY(300px) rotate(180deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateX(-50%) translateY(-100px) rotate(360deg);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animações de Pétalas -->
+    <div class="petalas"></div>
+    <div class="petalas" style="animation-delay: 3s;"></div>
+    <div class="petalas" style="animation-delay: 5s;"></div>
+    <div class="coracoes"></div>
+    <div class="coracoes" style="animation-delay: 2s;"></div>
+    <div class="coracoes" style="animation-delay: 4s;"></div>
+
+    <h1>Nosso Tempo Juntos</h1>
+    <p class="frase">Nosso amor, daqui até a lua, atravessando todo o espaço-tempo.</p>
+
+    <!-- Carrossel de Imagens -->
+    <div class="carousel">
+        <img src="https://i.postimg.cc/3NsxChDd/IMG-20250113-WA0005.jpg" alt="Foto 1" class="active">
+        <img src="https://i.postimg.cc/MG9Z3VQk/IMG-20250113-WA0006.jpg" alt="Foto 2">
+        <img src="https://i.postimg.cc/P5kqCtj7/IMG-20250119-WA0013.jpg" alt="Foto 3">
+        <img src="https://i.postimg.cc/9XK0jdNC/IMG-20250223-WA0046.jpg" alt="Foto 4">
+        <img src="https://i.postimg.cc/28W6j1Pv/IMG-20250109-195847-588.webp" alt="Foto 5">
+        <img src="https://i.postimg.cc/yN1YTvWX/IMG-20250302-154817-117-2.jpg" alt="Foto 6">
+        <img src="https://i.postimg.cc/pLYL8gVL/Screenshot-2025-02-26-16-56-51-348-com-miui-gallery.jpg" alt="Foto 7">
+    </div>
+
+    <div class="love-title">Vitor e Rauana</div>
+    <p class="love-message">Olá Bruna Rauana Martins da Silva, só vim lhe dizer que você é a minha estrela, aquela que ilumina todo o meu céu e que nunca se apagará. O nosso amor, mesmo brigados, seja feito como uma fênix, onde sempre que se fere, ela renasce mais forte, e que Deus nos guarde ontem, amanhã e para todo o sempre.</p>
+
+    <!-- Novo Contador Manual -->
+    <div class="container">
+        <div id="contador">
+            <div>
+                <div class="time-box" id="dias">00</div>
+                <div class="time-label">Dias</div>
+            </div>
+            <div>
+                <div class="time-box" id="horas">00</div>
+                <div class="time-label">Horas</div>
+            </div>
+            <div>
+                <div class="time-box" id="minutos">00</div>
+                <div class="time-label">Minutos</div>
+            </div>
+            <div>
+                <div class="time-box" id="segundos">00</div>
+                <div class="time-label">Segundos</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Carrossel de Imagens
+        let index = 0;
+        const imagens = document.querySelectorAll('.carousel img');
+
+        function trocarImagem() {
+            imagens[index].classList.remove('active');
+            index = (index + 1) % imagens.length;
+            imagens[index].classList.add('active');
+        }
+
+        setInterval(trocarImagem, 3000);
+
+        // Contador de Tempo Estilo Manual
+        function atualizarContador() {
+            const dataInicio = new Date(2024, 8, 17, 0, 0, 0); // Setembro é mês 8 (índice começa em 0)
+            const agora = new Date();
+            const diferenca = agora - dataInicio;
+
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+            document.getElementById('dias').innerText = String(dias).padStart(2, '0');
+            document.getElementById('horas').innerText = String(horas).padStart(2, '0');
+            document.getElementById('minutos').innerText = String(minutos).padStart(2, '0');
+            document.getElementById('segundos').innerText = String(segundos).padStart(2, '0');
+        }
+
+        setInterval(atualizarContador, 1000);
+        atualizarContador();
+    </script>
+</body>
+</html>
